@@ -1,142 +1,179 @@
-<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <header class="mb-12 text-center text-slate-200">
-        <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Robert O. Rodriguez</h1>
-        <p class="mt-2 text-lg leading-8 text-blue-400">Threat Detection & Response Engineer</p>
-        <div class="mt-4 flex flex-col sm:flex-row justify-center space-y-1 sm:space-y-0 sm:space-x-6 text-sm text-slate-400">
-            <span>Columbus, OH</span>
-            <span>•</span>
-            <a href="https://www.linkedin.com/in/robert-o-rodriguez/" class="hover:underline">LinkedIn</a>
-            <span>•</span>
-            <span>614.717.5098</span>
-            <span>•</span>
-            <a href="mailto:robertrodriguez220@gmail.com" class="hover:underline">robertrodriguez220@gmail.com</a>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Profile: Robert O. Rodriguez | Detection Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .tab-active { border-color: #3b82f6; color: #3b82f6; background-color: #eff6ff; }
+        .tab-inactive { border-color: transparent; color: #64748b; }
+        .content-active { display: block; }
+        .content-inactive { display: none; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin: 0 auto; height: 350px; }
+    </style>
+</head>
+<body class="text-slate-700">
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-slate-800">Robert O. Rodriguez</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="text-slate-600 hover:bg-slate-100 px-3 py-2 rounded-md text-sm font-medium">Overview</a>
+                        <a href="#competencies" class="text-slate-600 hover:bg-slate-100 px-3 py-2 rounded-md text-sm font-medium">Core Competencies</a>
+                        <a href="#skills" class="text-slate-600 hover:bg-slate-100 px-3 py-2 rounded-md text-sm font-medium">Technical Skills</a>
+                        <a href="#impact" class="text-slate-600 hover:bg-slate-100 px-3 py-2 rounded-md text-sm font-medium">Impact & Projects</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="summary" class="mb-12">
-        <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Summary</h2>
-            <p class="text-slate-300 leading-relaxed">
-                Detection Engineer with 4+ years of experience designing, deploying, and tuning high‑fidelity detections in enterprise environments. Expert in SIEM content development mapped to MITRE ATT&CK, automating investigative workflows, and integrating threat intelligence to reduce false positives. Proven track record in proactive threat hunting, malware analysis, and PowerShell scripting to improve Mean Time to Detect (MTTD).
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section id="overview" class="mb-20 text-center">
+            <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Detection Engineer</h1>
+            <p class="mt-6 text-lg leading-8 text-slate-600 max-w-3xl mx-auto">
+                Specialist in designing and tuning high-fidelity detections mapped to MITRE ATT&CK. Expert in automating investigative workflows and integrating threat intelligence to reduce false positives in enterprise environments.
             </p>
-        </div>
-    </section>
-
-    <section id="experience" class="mb-12">
-        <div class="text-center mb-6">
-            <h2 class="text-3xl font-bold tracking-tight text-blue-400 sm:text-4xl">Professional Experience</h2>
-        </div>
-        <div class="bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 border border-gray-700">
-            <div class="mb-6 border-b border-gray-700">
-                <nav class="-mb-px flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4" aria-label="Tabs">
-                    <button class="tab-btn tab-active" data-tab="sr-specialist">Sr. Security Specialist</button>
-                    <button class="tab-btn tab-inactive" data-tab="specialist">Security Specialist Associate</button>
-                </nav>
-            </div>
-            <div>
-                <div id="sr-specialist" class="tab-content content-active">
-                    <h3 class="text-xl font-semibold text-slate-200 mb-2">American Electric Power (AEP) | Remote Sr. Security Specialist (Detection Engineering)</h3>
-                    <p class="text-sm italic text-slate-400 mb-4">July 2021 – Present</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-300">
-                        <li>Engineered and deployed high-fidelity behavioral detections using KQL and Sigma, increasing MITRE ATT&CK coverage of priority TTPs by 35%.</li>
-                        <li>Led targeted threat hunts across endpoints, network, and identity telemetry to identify visibility gaps and translate findings into production SIEM/EDR logic.</li>
-                        <li>Developed and managed a Git-based Detection-as-Code workflow, enabling version control, peer reviews, and automated deployment of detection rules.</li>
-                        <li>Partnered with Incident Response (IR) to tune high-volume alerts, reducing false positive rates by 20% while maintaining detection sensitivity.</li>
-                        <li>Created reusable detection playbooks and documentation to standardize the investigation of complex adversary behaviors.</li>
-                        <li>Served as the primary technical resource for detection lifecycle management, from initial hypothesis and telemetry validation to long-term tuning.</li>
-                    </ul>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-3xl font-semibold text-blue-600">6+</h3>
+                    <p class="mt-2 text-slate-500">Years in Cyber Operations</p>
                 </div>
-                <div id="specialist" class="tab-content content-inactive">
-                    <h3 class="text-xl font-semibold text-slate-200 mb-2">American Electric Power | Security Specialist Associate</h3>
-                    <p class="text-sm italic text-slate-400 mb-4">July 2019 – July 2021</p>
-                    <ul class="list-disc list-inside space-y-2 text-slate-300">
-                        <li>Monitored and triaged security alerts in a 24/7 SOC environment, escalating validated threats for rapid containment and remediation.</li>
-                        <li>Performed static malware analysis to identify indicators of compromise (IOCs) and support the development of custom detection logic.</li>
-                        <li>Built and maintained a searchable SOC knowledge base to standardize triage processes and improve escalation accuracy for junior analysts.</li>
-                        <li>Participated in an on-call rotation to provide 24/7 coverage for critical detection triggers and incident response support.</li>
-                    </ul>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-3xl font-semibold text-blue-600">35%</h3>
+                    <p class="mt-2 text-slate-500">ATT&CK Coverage Increase</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200">
+                    <h3 class="text-3xl font-semibold text-blue-600">Git-Ops</h3>
+                    <p class="mt-2 text-slate-500">Detection-as-Code Expert</p>
                 </div>
             </div>
+        </section>
+
+        <section id="competencies" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Core Competencies</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-8 border border-slate-200">
+                <div class="mb-6 border-b border-slate-200">
+                    <nav class="-mb-px flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                        <button class="tab-btn tab-active" data-tab="detection">Detection Engineering</button>
+                        <button class="tab-btn tab-inactive" data-tab="hunting">Threat Hunting</button>
+                        <button class="tab-btn tab-inactive" data-tab="analysis">Malware Analysis</button>
+                    </nav>
+                </div>
+                <div>
+                    <div id="detection" class="tab-content content-active">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">High-Fidelity Content Development</h3>
+                        <p class="text-slate-600">
+                            At AEP, I engineered behavioral detections using **KQL and Sigma**, focusing on reducing false positives by 20% while maintaining high sensitivity. I managed the full lifecycle from hypothesis to production deployment via Git-based workflows.
+                        </p>
+                    </div>
+                    <div id="hunting" class="tab-content content-inactive">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Hypothesis-Driven Hunting</h3>
+                        <p class="text-slate-600">
+                            I lead targeted hunts across endpoint, network, and identity telemetry. By identifying visibility gaps, I translate findings into durable SIEM/EDR logic, shifting the organization from reactive to proactive defense.
+                        </p>
+                    </div>
+                    <div id="analysis" class="tab-content content-inactive">
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Static Malware & Triage</h3>
+                        <p class="text-slate-600">
+                            Leveraging YARA and static analysis techniques, I identify IOCs and adversary TTPs to support incident response and develop custom detection logic for emerging threats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-20">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Technical Skills & Frameworks</h2>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-4 sm:p-8 border border-slate-200">
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="mb-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Impact & Key Initiatives</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">Enterprise Sysmon Deployment</h3>
+                    <p class="text-sm text-slate-600">Led the organization-wide rollout of custom Sysmon configurations, capturing high-value telemetry like Named Pipes and Process Creation while minimizing log noise.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-200">
+                    <h3 class="font-bold text-lg text-blue-600 mb-2">Purple Team Lead</h3>
+                    <p class="text-sm text-slate-600">Primary stakeholder in collaborative exercises with Red Team operators, validating detection efficacy against live attacks and closing visibility gaps.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="font-semibold text-lg">Robert O. Rodriguez</p>
+            <p class="mt-2 text-slate-300">Columbus, OH | 614.717.5098</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="mailto:robertrodriguez220@gmail.com" class="hover:text-blue-400">robertrodriguez220@gmail.com</a>
+                <a href="https://www.linkedin.com/in/robert-o-rodriguez/" class="hover:text-blue-400">LinkedIn</a>
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="education" class="mb-12">
-        <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Education</h2>
-            <p class="text-slate-300">Associate of Applied Science, Computer Networking Systems</p>
-        </div>
-    </section>
-
-    <section id="skills" class="mb-12">
-        <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Technical Skills</h2>
-            <ul class="list-disc list-inside space-y-2 text-slate-300">
-                <li><strong class="text-blue-300">Detection Engineering:</strong> SIEM Content Development (Microsoft Sentinel, Splunk), Sigma Rules, KQL, YARA, Detection-as-Code (Git), Detection Lifecycle Management.</li>
-                <li><strong class="text-blue-300">Threat Analysis:</strong> MITRE ATT&CK Mapping, Adversary TTPs, Static Malware Analysis, Threat Intelligence (CTI) Integration.</li>
-                <li><strong class="text-blue-300">Security Operations:</strong> Proactive Threat Hunting, EDR/XDR (Microsoft Defender), Windows Event Log Analysis, Network & Endpoint Telemetry.</li>
-                <li><strong class="text-blue-300">Automation & Scripting:</strong> PowerShell, Python, SOC Workflow Automation, Playbook Development.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="strengths" class="mb-12">
-        <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
-            <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Professional Strengths</h2>
-            <ul class="list-disc list-inside space-y-2 text-slate-300">
-                <li>Building and tuning high-fidelity detections</li>
-                <li>Automation of detection workflows</li>
-                <li>Threat hunting to validate coverage gaps</li>
-                <li>Cross-team collaboration with Incident Response and Threat Intelligence</li>
-                <li>Continuous improvement of detection pipelines</li>
-            </ul>
-        </div>
-    </section>
-</main>
-
-<footer class="bg-gray-900 text-slate-400">
-    <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
-        <p class="font-semibold text-lg">Thank you for your time and consideration.</p>
-        <p class="mt-2 text-slate-500">I look forward to discussing my qualifications with you further.</p>
-    </div>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Initiate Cloud Function on page load to log access.
-        fetch('https://us-central1-direct-return-159514.cloudfunctions.net/log_resume_access')
-            .then(response => {
-                if (!response.ok) {
-                    console.error('Failed to log page view:', response.status);
-                }
-            })
-            .catch(error => console.error('Error initiating log:', error));
-        
-        const tabs = document.querySelectorAll('.tab-btn');
-        const contents = document.querySelectorAll('.tab-content');
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', function () {
-                tabs.forEach(item => {
-                    item.classList.remove('tab-active');
-                    item.classList.add('tab-inactive');
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Tabs Logic
+            const tabs = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    tabs.forEach(item => { item.classList.remove('tab-active'); item.classList.add('tab-inactive'); });
+                    this.classList.remove('tab-inactive'); this.classList.add('tab-active');
+                    contents.forEach(content => {
+                        content.classList.add('content-inactive'); content.classList.remove('content-active');
+                        if (content.id === this.dataset.tab) content.classList.add('content-active');
+                    });
                 });
-                this.classList.remove('tab-inactive');
-                this.classList.add('tab-active');
+                tab.classList.add('px-4', 'py-2', 'font-medium', 'text-sm', 'rounded-t-lg', 'border-b-2', 'transition-colors');
+            });
 
-                const target = this.dataset.tab;
-                contents.forEach(content => {
-                    content.classList.remove('content-active');
-                    content.classList.add('content-inactive');
-                    if (content.id === target) {
-                        content.classList.remove('content-inactive');
-                        content.classList.add('content-active');
+            // Skills Chart Logic
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['KQL / Sentinel', 'Sigma Rules', 'EDR / Microsoft Defender', 'MITRE ATT&CK Mapping', 'Detection-as-Code', 'PowerShell/Python', 'Malware Analysis'],
+                    datasets: [{
+                        data: [95, 90, 92, 95, 88, 85, 75],
+                        backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' } }
                     }
-                });
+                }
             });
         });
-        
-        tabs.forEach(tab => {
-            tab.classList.add('px-4', 'py-2', 'font-medium', 'text-sm', 'rounded-t-lg', 'border-b-2', 'transition-colors', 'duration-200', 'ease-in-out', 'focus:outline-none');
-        });
-    });
-</script>
+    </script>
+</body>
+</html>
