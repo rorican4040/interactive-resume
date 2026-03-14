@@ -93,4 +93,50 @@
     </section>
 </main>
 
-<!-- (... existing footer and script ...) -->
+<footer class="bg-gray-900 text-slate-400">
+    <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-semibold text-lg">Thank you for your time and consideration.</p>
+        <p class="mt-2 text-slate-500">I look forward to discussing my qualifications with you further.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initiate Cloud Function on page load to log access.
+        fetch('https://us-central1-direct-return-159514.cloudfunctions.net/log_resume_access')
+            .then(response => {
+                if (!response.ok) {
+                    console.error('Failed to log page view:', response.status);
+                }
+            })
+            .catch(error => console.error('Error initiating log:', error));
+        
+        const tabs = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                tabs.forEach(item => {
+                    item.classList.remove('tab-active');
+                    item.classList.add('tab-inactive');
+                });
+                this.classList.remove('tab-inactive');
+                this.classList.add('tab-active');
+
+                const target = this.dataset.tab;
+                contents.forEach(content => {
+                    content.classList.remove('content-active');
+                    content.classList.add('content-inactive');
+                    if (content.id === target) {
+                        content.classList.remove('content-inactive');
+                        content.classList.add('content-active');
+                    }
+                });
+            });
+        });
+        
+        tabs.forEach(tab => {
+            tab.classList.add('px-4', 'py-2', 'font-medium', 'text-sm', 'rounded-t-lg', 'border-b-2', 'transition-colors', 'duration-200', 'ease-in-out', 'focus:outline-none');
+        });
+    });
+</script>
