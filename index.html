@@ -43,6 +43,7 @@
                         <a href="#summary" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Summary</a>
                         <a href="#experience" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
                         <a href="#skills" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#education" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
                         <a href="#projects" class="text-slate-300 hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
                     </div>
                 </div>
@@ -111,6 +112,35 @@
             </div>
         </section>
 
+        <section id="skills" class="mb-12">
+            <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
+                <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Technical Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-300">
+                    <ul class="space-y-2">
+                        <li><strong class="text-blue-300">Detection:</strong> SIEM (Sentinel, Splunk), Sigma Rules, KQL, YARA, Detection-as-Code (Git)</li>
+                        <li><strong class="text-blue-300">Analysis:</strong> MITRE ATT&CK Mapping, EDR/XDR (Microsoft Defender), Malware Analysis</li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li><strong class="text-blue-300">Scripting:</strong> PowerShell, Python, Bash, SOC Automation</li>
+                        <li><strong class="text-blue-300">Infrastructure:</strong> Sysmon, Windows Internals, Networking Fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-12">
+            <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
+                <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Education</h2>
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-200">ITT Technical Institute</h3>
+                        <p class="text-blue-300">Associate of Applied Science in Computer Networking Systems</p>
+                    </div>
+                    <p class="text-sm text-slate-400 mt-2 sm:mt-0 italic">Hilliard, OH</p>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="mb-12">
             <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
                 <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Technical Initiatives</h2>
@@ -126,22 +156,6 @@
                 </div>
             </div>
         </section>
-
-        <section id="skills" class="mb-12">
-            <div class="bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8 border border-gray-700">
-                <h2 class="text-2xl font-bold tracking-tight text-blue-400 mb-4">Technical Skills</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-300">
-                    <ul class="space-y-2">
-                        <li><strong class="text-blue-300">Detection:</strong> SIEM (Sentinel, Splunk), Sigma Rules, KQL, YARA, Detection-as-Code (Git)</li>
-                        <li><strong class="text-blue-300">Analysis:</strong> MITRE ATT&CK Mapping, EDR/XDR (Microsoft Defender), Malware Analysis</li>
-                    </ul>
-                    <ul class="space-y-2">
-                        <li><strong class="text-blue-300">Scripting:</strong> PowerShell, Python, Bash, SOC Automation</li>
-                        <li><strong class="text-blue-300">Education:</strong> AAS, Computer Networking Systems</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="bg-gray-900 text-slate-400">
@@ -153,7 +167,6 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Log access via Cloud Function
             fetch('https://us-central1-direct-return-159514.cloudfunctions.net/log_resume_access').catch(e => console.error(e));
             
             const tabs = document.querySelectorAll('.tab-btn');
